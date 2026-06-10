@@ -406,6 +406,11 @@
             animation: pulse-beta 2s ease-in-out infinite;
         }
 
+        .status-dot.staging {
+            background: #8b5cf6;
+            animation: pulse-staging 2s ease-in-out infinite;
+        }
+
         @keyframes pulse-live {
             0%, 100% { 
                 opacity: 1;
@@ -436,6 +441,17 @@
             50% { 
                 opacity: 0.6;
                 box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+            }
+        }
+
+        @keyframes pulse-staging {
+            0%, 100% { 
+                opacity: 1;
+                box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+            }
+            50% { 
+                opacity: 0.6;
+                box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
             }
         }
 
@@ -764,6 +780,19 @@
                     <div class="demo-status">
                         <span class="status-dot live"></span>
                         Live
+                    </div>
+                </a>
+
+                <a href="https://mbop.se-plainid.com/" class="demo-item" target="_blank" rel="noopener noreferrer">
+                    <div class="demo-visual">🏦</div>
+                    <div class="demo-label">Interactive Demo</div>
+                    <h3 class="demo-name">mBOP</h3>
+                    <p class="demo-description">
+                        Staging environment for the BOP banking demo.
+                    </p>
+                    <div class="demo-status">
+                        <span class="status-dot staging"></span>
+                        Staging
                     </div>
                 </a>
             </div>
@@ -1101,7 +1130,7 @@
         <div class="category-section">
             <h3 class="category-title">Security & Compliance</h3>
             <div class="demo-showcase">
-                <a href="#" onclick="return checkPassword('https://breach.se-plainid.com');" class="demo-item">
+                <a href="#" onclick="return checkPassword('https://breach.plainid-demo.com/');" class="demo-item">
                     <div class="demo-visual">🚨</div>
                     <div class="demo-label">Interactive Demo</div>
                     <h3 class="demo-name">Breach Prevention</h3>
